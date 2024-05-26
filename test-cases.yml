@@ -1,0 +1,23 @@
+---
+- summary: Проверка возможности регистрации пользователя через Github
+  requirement: Возможность зарегистрировать аккаунт через уже имеющийся профиль на Github
+  prerequisites: 
+  - Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  - У пользователя уже есть аккаунт на Github
+  test-data: no data
+  steps: |
+  - Нажать Sing in with Github
+  - Ввести данные своего профиля на Github
+  expected-result: У пользователя получается зарегестрироваться через Github
+
+- summary: Проверка авторизации через Github
+  requirement: Возможность авторизации через профиль на Github
+  prerequisites: |
+  - Открыта страница https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  - У пользователя уже есть аккаунт на Github
+  test-data: no data
+  steps: 
+  - Нажать Sing in with Github
+  - Ввести данные своего профиля на Github
+  expected-result: У пользователя получается авторизоваться через Github
+  

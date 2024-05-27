@@ -21,3 +21,14 @@
   - Ввести данные своего профиля на Github
   expected-result: У пользователя получается авторизоваться через Github
   
+- summary: Успешная регистрация при корректном заполнении всех полей
+  requirement: Аккаунт зарегестрирован при коррекном заполнении всех полей
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = Esetik Email = eset.bulgucheva@gmail.com Password = 1324731 Password Confirmation = 1324731
+  steps: 
+  - Заполнить поле Nickname
+  - Заполнить поле Email
+  - Заполнить поле Password
+  - Заполнить поле Password Confirmation
+  - Нажать Submit
+  expected-result: Появляется сообщение об успешной регистрации

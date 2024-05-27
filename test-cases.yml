@@ -6,7 +6,7 @@
   - У пользователя уже есть аккаунт на Github
   test-data: no data
   steps: |
-  - Нажать Sing in with Github
+  - Нажать Sign up with Github
   - Ввести данные своего профиля на Github
   expected-result: У пользователя получается зарегестрироваться через Github
 
@@ -17,12 +17,30 @@
   - У пользователя уже есть аккаунт на Github
   test-data: no data
   steps: 
-  - Нажать Sing in with Github
+  - Нажать Sign in with Github
   - Ввести данные своего профиля на Github
   expected-result: У пользователя получается авторизоваться через Github
+
+  - summary: Проверка возможности регистрации пользователя через Discord
+  requirement: Возможность зарегистрировать аккаунт через уже имеющийся профиль на Discord
+  prerequisites: У пользовтеля есть аккаунт на Dicscord
+  test-data: no data
+  steps: 
+  - Нажать Sign up with Discord
+  - Ввести данные своего профиля на Dicscord
+  expected-result: У пользователя получается зарегестрироваться через Discord
+
+- summary: Проверка авторизации через Dicscord
+  requirement: Возможность авторизации через профиль на Dicscord
+  prerequisites: У пользователя есть аккаунт Discord
+  test-data: no data
+  steps: 
+  - Нажать Sign in with Discord
+  - Ввести данные своего Discord
+  expected-result: У пользователя получается авторизоваться через Discord
   
 - summary: Успешная регистрация при корректном заполнении всех полей
-  requirement: Аккаунт зарегестрирован при коррекном заполнении всех полей
+  requirement: Аккаунт зарегестрирован при коррекnном заполнении всех полей
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: Тестовые данные Nickname = Esetik Email = eset.bulgucheva@gmail.com Password = 1324731 Password Confirmation = 1324731
   steps: 
@@ -32,3 +50,54 @@
   - Заполнить поле Password Confirmation
   - Нажать Submit
   expected-result: Появляется сообщение об успешной регистрации
+  
+- summary: Проверка отмены регистрации при незаполнении информационных полей
+  requirement: При попытке отправить пустые формы появляется уведомление об ошибке 
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: no data 
+  steps:
+  - Нажать Submit
+  expected-result: Появляется уведомление об ошибке и подсказками для каждого поля
+
+- summary: Проверка невозможности регистрации при некорректном заполнении поля Nickname
+  requirement: При отправке некорректных данных в поле Nickname появляется уведомление об ошибке с подсказками
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Email = eset.bulgucheva@gmail.com Password = 1324731 Password Confirmation = 1324731
+  steps: 
+  - Ввести в пустое поле Nickname кириллицей 
+  - Ввести в пустое поле Nickname цифры в начале имени
+  - Ввести в пустое поле Nickname не больше 3х символов
+  - Ввести в пустое поле Nickname больше 16 символов
+  - Ввести в поле Nickname знаки и символы отсутсвующие в подсказке
+  expected-result: При некорректном заполнении поля Nickname появляется уведомление об ошибке
+
+- summary: Проверка невозможности регистрации при некорректном заполнении поля Email
+  requirement: При отправке некорректных данных в поле Email появляется уведомление об ошибке с подсказками
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = Esetik Password = 1324731 Password Confirmation = 1324731
+  steps: 
+  - Ввести в пустое поле Email email кириллицей
+  - Ввести в пустое поле Email email без "@"
+  - Ввести в пустое поле Email email без имени пользователя
+  - Ввести в пустое поле Email email без доменного имени именем
+  expected-result: При некорректном заполнении поля Email появляется уведомление об ошибке
+
+  - summary: Проверка невозможности регистрации при некорректном заполнении поля Password
+  requirement: При отправке некорректных данных в поле Password появляется уведомление об ошибке с подсказками
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = Esetik Email = eset.bulgucheva@gmail.com
+  steps: 
+  - Ввести в пустое поле Password менее 6 символов
+  - Ввести в пустое поле Password более 16 символов
+  expected-result: При некорректном заполнении поля Password появляется уведомление об ошибке
+
+- summary: Проверка невозможности регистрации при несовпадении данных в полях Password и Password Confirmation
+  requirement: При отправке формы с несовпадающими полями Password и Password Confirmation появляется уведомление об ошибке с подсказками
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = Esetik Email = eset.bulgucheva@gmail.com Password = 1324731 Password Confirmation = 13247312
+  steps: 
+  - Ввести в поле Password пароль 1324731
+  - Ввести в поле Password Confirmation 13247312
+  expected-result: При несовпадении полей Password и Password Confirmation появляется уведомление об ошибке с подсказками
+
+  

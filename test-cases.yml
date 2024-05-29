@@ -6,8 +6,8 @@
   - У пользователя уже есть аккаунт на Github
   test-data: no data
   steps: |
-  - Нажать Sign up with Github
-  - Ввести данные своего профиля на Github
+  1. Нажать Sign up with Github
+  2. Ввести данные своего профиля на Github
   expected-result: У пользователя получается зарегестрироваться через Github
 
 - summary: Проверка авторизации через Github
@@ -17,8 +17,8 @@
   - У пользователя уже есть аккаунт на Github
   test-data: no data
   steps: 
-  - Нажать Sign in with Github
-  - Ввести данные своего профиля на Github
+  1. Нажать Sign in with Github
+  2. Ввести данные своего профиля на Github
   expected-result: У пользователя получается авторизоваться через Github
 
 - summary: Проверка возможности регистрации пользователя через Discord
@@ -26,8 +26,8 @@
   prerequisites: У пользовтеля есть аккаунт на Dicscord
   test-data: no data
   steps: 
-  - Нажать Sign up with Discord
-  - Ввести данные своего профиля на Dicscord
+  1. Нажать Sign up with Discord
+  2. Ввести данные своего профиля на Dicscord
   expected-result: У пользователя получается зарегестрироваться через Discord
 
 - summary: Проверка авторизации через Dicscord
@@ -35,8 +35,8 @@
   prerequisites: У пользователя есть аккаунт Discord
   test-data: no data
   steps: 
-  - Нажать Sign in with Discord
-  - Ввести данные своего Discord
+  1. Нажать Sign in with Discord
+  2. Ввести данные своего Discord
   expected-result: У пользователя получается авторизоваться через Discord
   
 - summary: Успешная регистрация при корректном заполнении всех полей
@@ -44,11 +44,11 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: Тестовые данные Nickname = Eseti-chan Email = eset.bulgucheva@mail.ru Password = 1324731 Password Confirmation = 1324731
   steps: 
-  - Заполнить поле Nickname
-  - Заполнить поле Email
-  - Заполнить поле Password
-  - Заполнить поле Password Confirmation
-  - Нажать Submit
+  1. Заполнить поле Nickname
+  2. Заполнить поле Email
+  3. Заполнить поле Password
+  4. Заполнить поле Password Confirmation
+  5. Нажать Submit
   expected-result: Появляется сообщение об успешной регистрации
   
 - summary: Проверка отмены регистрации при незаполнении информационных полей
@@ -56,7 +56,7 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: no data 
   steps:
-  - Нажать Submit
+  1. Нажать Submit
   expected-result: Появляется уведомление об ошибке и подсказками для каждого поля
 
 - summary: Проверка невозможности регистрации при некорректном заполнении поля Nickname
@@ -64,11 +64,11 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: Тестовые данные Email = eset.bulgucheva@mail.ru Password = 1324731 Password Confirmation = 1324731
   steps: 
-  - Ввести в пустое поле Nickname кириллицей 
-  - Ввести в пустое поле Nickname цифры в начале имени
-  - Ввести в пустое поле Nickname не больше 3х символов
-  - Ввести в пустое поле Nickname больше 16 символов
-  - Ввести в поле Nickname знаки и символы отсутсвующие в подсказке
+  1. Ввести в пустое поле Nickname кириллицей 
+  2. Ввести в пустое поле Nickname цифры в начале имени
+  3. Ввести в пустое поле Nickname не больше 3х символов
+  4. Ввести в пустое поле Nickname больше 16 символов
+  5. Ввести в поле Nickname знаки и символы отсутсвующие в подсказке
   expected-result: При некорректном заполнении поля Nickname появляется уведомление об ошибке
 
 - summary: Проверка невозможности регистрации при некорректном заполнении поля Email
@@ -76,10 +76,10 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: Тестовые данные Nickname = Eseti-chan Password = 1324731 Password Confirmation = 1324731
   steps: 
-  - Ввести в пустое поле Email email кириллицей
-  - Ввести в пустое поле Email email без "@"
-  - Ввести в пустое поле Email email без имени пользователя
-  - Ввести в пустое поле Email email без доменного имени именем
+  1. Ввести в пустое поле Email email кириллицей
+  2. Ввести в пустое поле Email email без "@"
+  3. Ввести в пустое поле Email email без имени пользователя
+  4. Ввести в пустое поле Email email без доменного имени именем
   expected-result: При некорректном заполнении поля Email появляется уведомление об ошибке
 
 - summary: Проверка невозможности регистрации при некорректном заполнении поля Password
@@ -87,8 +87,8 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: Тестовые данные Nickname = Eseti-chan Email = eset.bulgucheva@mail.ru
   steps: 
-  - Ввести в пустое поле Password менее 6 символов
-  - Ввести в пустое поле Password более 16 символов
+  1. Ввести в пустое поле Password менее 6 символов
+  2. Ввести в пустое поле Password более 16 символов
   expected-result: При некорректном заполнении поля Password появляется уведомление об ошибке
 
 - summary: Проверка невозможности регистрации при несовпадении данных в полях Password и Password Confirmation
@@ -96,8 +96,8 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: Тестовые данные Nickname = Eseti-chan Email = eset.bulgucheva@mail.ru Password = 1324731 Password Confirmation = 13247312
   steps: 
-  - Ввести в поле Password пароль 1324731
-  - Ввести в поле Password Confirmation 13247312
+  1. Ввести в поле Password пароль 1324731
+  2. Ввести в поле Password Confirmation 13247312
   expected-result: При несовпадении полей Password и Password Confirmation появляется уведомление об ошибке с подсказками
 
 - summary: Проверка невозможности создать новый профиль с уже занятым именем пользователя
@@ -105,11 +105,11 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: Тестовые данные Nickname = Eseti-chan Email = eset.bulgucheva@mail.ru Password = 1324731 Password Confirmation = 1324731
   steps: 
-  - Заполнить поле Nickname
-  - Заполнить поле Email
-  - Заполнить поле Password
-  - Заполнить поле Password Confirmation
-  - Нажать Submit
+  1. Заполнить поле Nickname
+  2. Заполнить поле Email
+  3. Заполнить поле Password
+  4. Заполнить поле Password Confirmation
+  5. Нажать Submit
   expected-result: Появляется уведомление о том что имя пользователя уже занято
 
 - summary: Проверка невозможности создать новый профиль на уже используюмую почту
@@ -117,11 +117,11 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: Тестовые данные Nickname = EsetAA Email = eset.bulgucheva@mail.ru Password = 1324731 Password Confirmation = 1324731
   steps: 
-  - Заполнить поле Nickname
-  - Заполнить поле Email
-  - Заполнить поле Password
-  - Заполнить поле Password Confirmation
-  - Нажать Submit
+  1. Заполнить поле Nickname
+  2. Заполнить поле Email
+  3. Заполнить поле Password
+  4. Заполнить поле Password Confirmation
+  5. Нажать Submit
   expected-result: Появляется уведомление о том что почта уже занята
   
 - summary: Проверка успешной авторизации в системе с правильными данными
@@ -129,8 +129,8 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: Тестовые данные Nickname = Eseti-chan Email = eset.bulgucheva@mail.ru Password = 1324731 Password Confirmation = 1324731
   steps: 
-  - Заполнить поле Email
-  - Заполнить поле Password
+  1. Заполнить поле Email
+  2. Заполнить поле Password
   expected-result: Пользователь успешно авторизуется в системе
 
 - summary: Проверка невозможности авторизации в системе при введении неправильной почты
@@ -138,9 +138,9 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: Тестовые данные Password = 1324731
   steps: 
-  - Заполнить поле Email неправильными данными
-  - Заполнить поле Password
-  - Нажать Submit 
+  1. Заполнить поле Email неправильными данными
+  2. Заполнить поле Password
+  3. Нажать Submit 
   expected-result: Пользователь не авторизуется в системе и появляется уведомление об ошибке
 
 - summary: Проверка невозможности авторизации в системе при введении неправильного пароля
@@ -148,9 +148,9 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: Тестовые данные Email = eset.bulgucheva@mail.ru
   steps: 
-  - Заполнить поле Email
-  - Заполнить поле Password не веными данными
-  - Нажать Submit 
+  1. Заполнить поле Email
+  2. Заполнить поле Password не веными данными
+  3. Нажать Submit 
   expected-result: Пользователь не авторизуется в системе и появляется уведомление об ошибке
 
 - summary: Проверка возможности восстановления пароля в случае если пользователь забыл пароль
@@ -158,8 +158,8 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: Email = eset.bulgucheva@mail.ru 
   steps: 
-  - Нажать на Forgot your password?
-  - Ввести в появившемся поле Email
+  1. Нажать на Forgot your password?
+  2. Ввести в появившемся поле Email
   expected-result: Пользователю на указанную почту приходит письмо с инструкциями по сбросу пароля
 
 - summary: Проверка возможности создать новую игру с другим пользователем
@@ -167,9 +167,9 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/#lobby после успешной авторизации в системе
   test-data: no data
   steps: 
-  - Нажать на кнопку Create a game
-  - В Game type выбрать With other user
-  - Нажать Create battle
+  1. Нажать на кнопку Create a game
+  2. В Game type выбрать With other user
+  3. Нажать Create battle
   expected-result: Создается новая игра
 
 - summary: Проверка возможности создать новую игру с конкретным пользователем
@@ -177,10 +177,10 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/#lobby после успешной авторизации в системе
   test-data: no data
   steps: 
-  - Нажать на кнопку Create a game
-  - В Game type выбрать With a friend 
-  - В открывшейся плашке выбрать оппонента
-  - Нажать Create battle
+  1. Нажать на кнопку Create a game
+  2. В Game type выбрать With a friend 
+  3. В открывшейся плашке выбрать оппонента
+  4. Нажать Create battle
   expected-result: Создается новая игра с выбранным пользователем
 
 - summary: Проверка возможности создать новую игру с ботом
@@ -188,9 +188,9 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/#lobby после успешной авторизации в системе
   test-data: no data
   steps: 
-  - Нажать на кнопку Create a game
-  - В Game type выбрать With a bot 
-  - Нажать Create battle
+  1. Нажать на кнопку Create a game
+  2. В Game type выбрать With a bot 
+  3. Нажать Create battle
   expected-result: Создается новая игра с ботом
 
 - summary: Проверка возможности выбрать сложность при создании новой игры
@@ -198,9 +198,9 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/#lobby после успешной авторизации в системе
   test-data: no data
   steps: 
-  - Нажать на кнопку Create a game
-  - Выбрать уровень сложности в Level
-  - Нажать Create battle
+  1. Нажать на кнопку Create a game
+  2. Выбрать уровень сложности в Level
+  3. Нажать Create battle
   expected-result: Создается новая игра с установленным уровнем сложности
 
 - summary: Проверка возможности установить ограничение на длительность боя
@@ -208,9 +208,9 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/#lobby после успешной авторизации в системе
   test-data: no data
   steps: 
-  - Нажать на кнопку Create a game
-  - Выбрать время
-  - Нажать Create battle
+  1. Нажать на кнопку Create a game
+  2. Выбрать время
+  3. Нажать Create battle
   expected-result: Создается новая игра с установленным таймером
 
 - summary: Проверка возможности написать сообщение в чат во время игры
@@ -218,8 +218,8 @@
   prerequisites: Пользователь в игре в качестве зрителя/участника
   test-data: no data
   steps: 
-  - Написать сообщение 
-  - Нажать кнопку отправить
+  1. Написать сообщение 
+  2. Нажать кнопку отправить
   expected-result: Написанное сообщение появляется в чате
 
 - summary: Проверка возможности сдаться во время игры
@@ -227,8 +227,8 @@
   prerequisites: Авторизация
   test-data: no data
   steps: 
-  - Создать игру 
-  - Нажать иконку красного флага - сдаться
+  1. Создать игру 
+  2. Нажать иконку красного флага - сдаться
   expected-result: Игра завершается. Пользователь проиграл
 
 - summary: Проверка выигрыша при правильно написанном коде 
@@ -236,9 +236,9 @@
   prerequisites: Авторизация 
   test-data: no data
   steps: 
-  - Создать игру
-  - Вести правильный код
-  - Запустить код
+  1. Создать игру
+  2. Вести правильный код
+  3. Запустить код
   expected-result: Игра завершается. Пользователь выиграл
 
 - summary: Проверка проигрыша при неправильно написанном коде
@@ -246,9 +246,9 @@
   prerequisites: Авторизация 
   test-data: no data
   steps: 
-  - Создать игру
-  - Ввести неправильный код
-  - Запустить код
+  1. Создать игру
+  2. Ввести неправильный код
+  3. Запустить код
   expected-result: Появляется уведомление о том, что решение неправильное
 
 - summary: Проверка возможности просматривать турнир
@@ -256,7 +256,7 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/tournaments после успешной авторизации в системе
   test-data: no data
   steps: 
-  - Нажать Show в любом из предложенных турниров
+  1. Нажать Show в любом из предложенных турниров
   expected-result: Пользователь может быть зрителем турнира
 
 - summary: Проверка возможности участвовать в турнире
@@ -264,8 +264,8 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/tournaments после успешной авторизации в системе
   test-data: no data
   steps: 
-  - Нажать Show в любом из предложенных турниров
-  - Нажать Join
+  1. Нажать Show в любом из предложенных турниров
+  2. Нажать Join
   expected-result: Пользователь присоединяется к турниру
 
 - summary: Проверка возможности изменить используемый в бою язык программирования
@@ -273,8 +273,8 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/settings после успешной авторизации в системе
   test-data: no data
   steps: 
-  - Выбрать язык в Your weapon
-  - Нажать save
+  1. Выбрать язык в Your weapon
+  2. Нажать save
   expected-result: У пользователя меняется язык программирования
 
 - summary: Проверка возможности посмотреть свой или чужой рейтинг
@@ -282,7 +282,7 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/users после успешной авторизации в системе
   test-data: no data
   steps: 
-  - Ввести любой ник в поисковую строку
+  1. Ввести любой ник в поисковую строку
   expected-result: Появляется искомый пользователь и его рейтинг
   
 - summary: Проверка возможности посмотреть свое участие в играх
@@ -290,6 +290,6 @@
   prerequisites: Авторизация
   test-data: no data
   steps: 
-  - Перейти в My profile
-  - Открыть Completed games
+  1. Перейти в My profile
+  2. Открыть Completed games
   expected-result: Пользователь может посмотреть информацию об играх, в которых он учавствовал

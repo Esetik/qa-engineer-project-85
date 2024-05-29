@@ -40,7 +40,7 @@
   expected-result: У пользователя получается авторизоваться через Discord
   
 - summary: Успешная регистрация при корректном заполнении всех полей
-  requirement: Аккаунт зарегестрирован при коррекnном заполнении всех полей
+  requirement: Аккаунт зарегестрирован при корректном заполнении всех полей
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: Тестовые данные Nickname = Eseti-chan Email = eset.bulgucheva@mail.ru Password = 1324731 Password Confirmation = 1324731
   steps: 

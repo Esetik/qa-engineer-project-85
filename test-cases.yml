@@ -7,8 +7,8 @@
   test-data: no data
   steps: |
   1. Нажать Sign up with Github
-  2.  Ввести данные своего профиля на Github.  
-expected-result:   У пользователя получается зарегестрироваться через Github
+  2.Ввести данные своего профиля на Github
+   expected-result:   У пользователя получается зарегестрироваться через Github
 
 - summary: Проверка авторизации через Github
   requirement: Возможность авторизации через профиль на Github

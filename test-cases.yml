@@ -8,7 +8,7 @@
   steps: |
   1. Нажать Sign up with Github
   2.Ввести данные своего профиля на Githиb
-  expected-result:  У пользователя получается зарегестрироваться через Github
+  expected-result:  У пользователя получается зарегистрироваться через Github
 
 - summary: Проверка авторизации через Github
   requirement: Возможность авторизации через профиль на Github
@@ -28,7 +28,7 @@
   steps: 
   1. Нажать Sign up with Discord
   2. Ввести данные своего профиля на Dicscord
-  expected-result: У пользователя получается зарегестрироваться через Discord
+  expected-result: У пользователя получается зарегистрироваться через Discord
 
 - summary: Проверка авторизации через Dicscord
   requirement: Возможность авторизации через профиль на Dicscord
@@ -40,7 +40,7 @@
   expected-result: У пользователя получается авторизоваться через Discord
   
 - summary: Успешная регистрация при корректном заполнении всех полей
-  requirement: Аккаунт зарегестрирован при корректном заполнении всех полей
+  requirement: Аккаунт зарегистрирован при корректном заполнении всех полей
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: Тестовые данные Nickname = Eseti-chan Email = eset.bulgucheva@mail.ru Password = 1324731 Password Confirmation = 1324731
   steps: 

@@ -8,7 +8,7 @@
   steps: |
   1. Нажать Sign up with Github
   2.Ввести данные своего профиля на Githиb
-   expected-result:   У пользователя получается зарегестрироваться через Github
+   expected-result:У пользователя получается зарегестрироваться через Github
 
 - summary: Проверка авторизации через Github
   requirement: Возможность авторизации через профиль на Github
